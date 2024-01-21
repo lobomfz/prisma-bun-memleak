@@ -1,0 +1,27 @@
+{
+  "name": "memleak",
+  "version": "1.0.50",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "stress:prisma": "bun artillery run stress/prisma.yaml",
+    "stress:kysely": "bun artillery run stress/kysely.yaml"
+  },
+  "dependencies": {
+    "@elysiajs/trpc": "^0.8.0",
+    "@elysiajs/websocket": "^0.2.8",
+    "@prisma/client": "5.8.1",
+    "@trpc/server": "^10.45.0",
+    "elysia": "latest",
+    "kysely": "^0.27.2",
+    "pg": "^8.11.3",
+    "prisma-kysely": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.10.9",
+    "artillery": "^2.0.4",
+    "bun-types": "latest",
+    "prisma": "^5.8.1",
+    "typescript": "^5.3.3"
+  },
+  "module": "src/index.js"
+}

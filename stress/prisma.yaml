@@ -1,0 +1,15 @@
+config:
+    target: "http://localhost:3000"
+    http:
+        timeout: 60
+        # higher to see the effects faster. 5 with kysely crashes my entire pc. effect still visible with 3.
+        maxSockets: 5
+    phases:
+        - duration: 300
+          arrivalRate: 100
+          name: "Stress Prisma"
+scenarios:
+    - flow:
+          - loop:
+                - get:
+                      url: "/prisma"
