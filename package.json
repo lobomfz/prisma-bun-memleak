@@ -1,0 +1,27 @@
+{
+  "name": "memleak",
+  "version": "1.0.50",
+  "type": "module",
+  "scripts": {
+    "dev": "npx tsc && node --expose-gc bin/index.js",
+    "stress:prisma": "npx artillery run stress/prisma.yaml",
+    "stress:kysely": "npx artillery run stress/kysely.yaml"
+  },
+  "dependencies": {
+    "@prisma/client": "5.8.1",
+    "dotenv": "^16.3.2",
+    "hyper-express": "^6.14.10",
+    "kysely": "^0.27.2",
+    "pg": "^8.11.3",
+    "prisma-kysely": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/busboy": "^1.5.3",
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.10.9",
+    "artillery": "^2.0.4",
+    "prisma": "^5.8.1",
+    "typescript": "^5.3.3"
+  },
+  "module": "src/index.js"
+}

@@ -1,0 +1,14 @@
+config:
+    target: "http://localhost:3000"
+    http:
+        timeout: 60
+        maxSockets: 10
+    phases:
+        - duration: 300
+          arrivalRate: 100
+          name: "Stress Prisma"
+scenarios:
+    - flow:
+          - loop:
+                - get:
+                      url: "/prisma"
