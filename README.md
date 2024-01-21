@@ -10,4 +10,4 @@
 1. POST / to run GC
 2. POST /prisma/disconnect to disconnect the client (none of these lower the mem usage)
 3. `bun stress:kysely` works without any issues
-4. Effect seems to happen with node to a _much_ lesser extent
+4. Effect seems to happen with node to a _much_ lesser extent (see branch node)
